@@ -42,6 +42,6 @@ See `data/README_data.md` for full details.
 - The dataset provides both RGB and CIE L\*a\*b\* values to make downstream analyses independent of implementation-specific conversion details.
 
 ## License and citation
-- Code license: TO BE ADDED
-- Data license: TO BE ADDED
+- Code license: MIT License (see `LICENSE`)
+- Data license: CC BY 4.0 (see `data/LICENSE`)
 - Citation: A Zenodo DOI will be added after archiving the release for long-term preservation.
