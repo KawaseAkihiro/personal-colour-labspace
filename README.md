@@ -1,7 +1,9 @@
 # personal-colour-labspace
 
+[![DOI](https://zenodo.org/badge/1158264019.svg)](https://doi.org/10.5281/zenodo.18646259)
+
 This repository provides an anonymised dataset and minimal reproducible code accompanying the paper
-**“Personal Colour between Perceptual Space and Social Practice”** (accepted; in proofreading).
+**"Personal Colour between Perceptual Space and Social Practice"** (accepted; in proofreading).
 
 It enables reproducibility of the classification analysis of personal-colour labels from colour coordinates.
 
@@ -29,12 +31,15 @@ See `data/README_data.md` for full details.
    python -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
+   ```
 2. Create a local config file:
    ```bash
    cp config.example.yml config.yml
+   ```
 3. Run:
    ```bash
    python run_pipeline.py
+   ```
 
 ## Reproducibility notes
 - The repository is designed to avoid machine-specific absolute paths (e.g., personal Google Drive directories).
