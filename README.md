@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1158264019.svg)](https://doi.org/10.5281/zenodo.18646259)
 
-**Languages:** English (this page) | [日本語](README_ja.md)
+**Languages:** English (this page) | [日本語](README_ja.md) | [Deutsch](README_de.md) | [한국어](README_ko.md)
 
 This repository provides an anonymised dataset and minimal reproducible code accompanying the paper
 **"Personal Colour between Perceptual Space and Social Practice"** (accepted; in proofreading).
