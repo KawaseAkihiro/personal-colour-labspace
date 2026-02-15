@@ -44,4 +44,5 @@ See `data/README_data.md` for full details.
 ## License and citation
 - Code license: MIT License (see `LICENSE`)
 - Data license: CC BY 4.0 (see `data/LICENSE`)
-- Citation: A Zenodo DOI will be added after archiving the release for long-term preservation.
+- Citation: Please cite the Zenodo Concept DOI (all versions): https://doi.org/10.5281/zenodo.18646259
+
