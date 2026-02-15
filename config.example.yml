@@ -1,0 +1,4 @@
+data_dir: data
+output_dir: outputs
+input_file: lab_samples.csv
+seed: 42
