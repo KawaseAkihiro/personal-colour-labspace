@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1158264019.svg)](https://doi.org/10.5281/zenodo.18646259)
 
-**Languages:** [English](README.md) | [日本語](README_ja.md) | Deutsch (diese Seite) | [한국어](README_ko.md)
+**Languages:** [English](README.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | Deutsch (diese Seite)
 
 Dieses Repository stellt einen anonymisierten Datensatz sowie minimalen, reproduzierbaren Code bereit, die den Beitrag
 **„Personal Colour between Perceptual Space and Social Practice“** (angenommen; im Korrekturprozess) begleiten.
