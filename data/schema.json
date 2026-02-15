@@ -14,23 +14,59 @@
       "pattern": "^#[0-9a-f]{6}$",
       "description": "sRGB colour encoded as #RRGGBB (lowercase hex)."
     },
-    "r": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB red channel [0,255]." },
-    "g": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB green channel [0,255]." },
-    "b": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB blue channel [0,255]." },
-
-    "L_star": { "type": "number", "minimum": 0, "maximum": 100, "description": "CIE L* lightness." },
-    "a_star": { "type": "number", "description": "CIE a* (green–red axis)." },
-    "b_star": { "type": "number", "description": "CIE b* (blue–yellow axis)." },
-
+    "r": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "sRGB red channel [0,255]."
+    },
+    "g": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "sRGB green channel [0,255]."
+    },
+    "b": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "sRGB blue channel [0,255]."
+    },
+    "L_star": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100.00001,
+      "description": "CIE L* lightness. Max slightly exceeds 100 due to floating-point rounding."
+    },
+    "a_star": {
+      "type": "number",
+      "minimum": -128,
+      "maximum": 128,
+      "description": "CIE a* (green–red axis). Conservative bounds."
+    },
+    "b_star": {
+      "type": "number",
+      "minimum": -128,
+      "maximum": 128,
+      "description": "CIE b* (blue–yellow axis). Conservative bounds."
+    },
     "tone2_label": {
       "type": "string",
-      "enum": ["yellow", "blue"],
-      "description": "Binary tone label."
+      "enum": ["yellow", "blue", "unknown"],
+      "description": "Binary tone label. 'unknown' indicates unmapped/uncertain cases."
     },
     "season_label": {
       "type": "string",
-      "enum": ["spring", "summer", "autumn", "winter", "spring_autumn", "summer_winter"],
-      "description": "Seasonal label (including ambiguous categories)."
+      "enum": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter",
+        "spring_autumn",
+        "summer_winter",
+        "unknown"
+      ],
+      "description": "Seasonal label. Includes ambiguous categories and 'unknown' for unmapped/uncertain cases."
     }
   },
   "required": [
