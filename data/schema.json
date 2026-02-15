@@ -14,46 +14,23 @@
       "pattern": "^#[0-9a-f]{6}$",
       "description": "sRGB colour encoded as #RRGGBB (lowercase hex)."
     },
-    "r": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 255,
-      "description": "sRGB red channel [0,255]."
-    },
-    "g": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 255,
-      "description": "sRGB green channel [0,255]."
-    },
-    "b": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 255,
-      "description": "sRGB blue channel [0,255]."
-    },
+    "r": { "type": "integer", "minimum": 0, "maximum": 255 },
+    "g": { "type": "integer", "minimum": 0, "maximum": 255 },
+    "b": { "type": "integer", "minimum": 0, "maximum": 255 },
+
     "L_star": {
       "type": "number",
       "minimum": 0,
-      "maximum": 100.00001,
-      "description": "CIE L* lightness. Max slightly exceeds 100 due to floating-point rounding."
+      "maximum": 100,
+      "description": "CIE L* lightness (clamped to [0,100] in this release)."
     },
-    "a_star": {
-      "type": "number",
-      "minimum": -128,
-      "maximum": 128,
-      "description": "CIE a* (green–red axis). Conservative bounds."
-    },
-    "b_star": {
-      "type": "number",
-      "minimum": -128,
-      "maximum": 128,
-      "description": "CIE b* (blue–yellow axis). Conservative bounds."
-    },
+    "a_star": { "type": "number" },
+    "b_star": { "type": "number" },
+
     "tone2_label": {
       "type": "string",
-      "enum": ["yellow", "blue", "unknown"],
-      "description": "Binary tone label. 'unknown' indicates unmapped/uncertain cases."
+      "enum": ["yellow", "blue", "yellow_blue"],
+      "description": "Binary tone label. 'yellow_blue' indicates multi-membership."
     },
     "season_label": {
       "type": "string",
@@ -62,11 +39,19 @@
         "summer",
         "autumn",
         "winter",
+        "spring_summer",
         "spring_autumn",
+        "spring_winter",
+        "summer_autumn",
         "summer_winter",
-        "unknown"
+        "autumn_winter",
+        "spring_summer_autumn",
+        "spring_summer_winter",
+        "spring_autumn_winter",
+        "summer_autumn_winter",
+        "spring_summer_autumn_winter"
       ],
-      "description": "Seasonal label. Includes ambiguous categories and 'unknown' for unmapped/uncertain cases."
+      "description": "Seasonal label. Multiple seasons are concatenated with underscores to represent multi-membership."
     }
   },
   "required": [
