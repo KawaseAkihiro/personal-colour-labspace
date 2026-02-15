@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "lab_samples.csv schema",
+  "description": "Schema for the anonymised sample-level dataset used in personal colour label classification.",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^S\\d{6}$",
+      "description": "Unique sample identifier."
+    },
+    "rgb_hex": {
+      "type": "string",
+      "pattern": "^#[0-9a-f]{6}$",
+      "description": "sRGB colour encoded as #RRGGBB (lowercase hex)."
+    },
+    "r": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB red channel [0,255]." },
+    "g": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB green channel [0,255]." },
+    "b": { "type": "integer", "minimum": 0, "maximum": 255, "description": "sRGB blue channel [0,255]." },
+
+    "L_star": { "type": "number", "minimum": 0, "maximum": 100, "description": "CIE L* lightness." },
+    "a_star": { "type": "number", "description": "CIE a* (green–red axis)." },
+    "b_star": { "type": "number", "description": "CIE b* (blue–yellow axis)." },
+
+    "tone2_label": {
+      "type": "string",
+      "enum": ["yellow", "blue"],
+      "description": "Binary tone label."
+    },
+    "season_label": {
+      "type": "string",
+      "enum": ["spring", "summer", "autumn", "winter", "spring_autumn", "summer_winter"],
+      "description": "Seasonal label (including ambiguous categories)."
+    }
+  },
+  "required": [
+    "sample_id",
+    "rgb_hex",
+    "r",
+    "g",
+    "b",
+    "L_star",
+    "a_star",
+    "b_star",
+    "tone2_label",
+    "season_label"
+  ],
+  "additionalProperties": false
+}
