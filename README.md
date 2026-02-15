@@ -1,11 +1,47 @@
 # personal-colour-labspace
 
-1. What this repository contains（1–2文）
+This repository provides an anonymised dataset and minimal reproducible code accompanying the paper
+**“Personal Colour between Perceptual Space and Social Practice”** (accepted; in proofreading).
 
-2. Data format（列の説明は data/README_data.md に逃がしてOK）
+It enables reproducibility of the classification analysis of personal-colour labels from colour coordinates.
 
-3. How to run（3行程度）
+## Repository structure
+- `data/lab_samples.csv` — anonymised sample-level dataset (RGB and CIE L\*a\*b\*)
+- `data/README_data.md` — data dictionary / codebook
+- `run_pipeline.py` — minimal runnable script to load and validate the dataset
+- `requirements.txt` — Python dependencies
+- `config.example.yml` — configuration template (paths and random seed)
+- `.gitignore` — excludes generated outputs and local config
 
-4. License（後で追加でも可）
+## Data summary
+Each row corresponds to one colour sample. The dataset includes:
+- sRGB values (`rgb_hex`, `r`, `g`, `b`)
+- CIE L\*a\*b\* coordinates (`L_star`, `a_star`, `b_star`)
+- two personal-colour label types:
+  - `tone2_label` (binary tone)
+  - `season_label` (seasonal label; includes ambiguous categories such as `spring_autumn`)
 
-5. Citation（Zenodo DOIが出たら追記）
+See `data/README_data.md` for full details.
+
+## Quick start
+1. Create a Python environment and install dependencies:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+2. Create a local config file:
+   ```bash
+   cp config.example.yml config.yml
+3. Run:
+   ```bash
+   python run_pipeline.py
+
+## Reproducibility notes
+- The repository is designed to avoid machine-specific absolute paths (e.g., personal Google Drive directories).
+- Random seeds are controlled via `config.yml` (default: `seed: 42`).
+- The dataset provides both RGB and CIE L\*a\*b\* values to make downstream analyses independent of implementation-specific conversion details.
+
+## License and citation
+- Code license: TO BE ADDED
+- Data license: TO BE ADDED
+- Citation: A Zenodo DOI will be added after archiving the release for long-term preservation.
