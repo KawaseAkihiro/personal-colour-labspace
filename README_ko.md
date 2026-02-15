@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1158264019.svg)](https://doi.org/10.5281/zenodo.18646259)
 
-**Languages:** [English](README.md) | [日本語](README_ja.md) | [Deutsch](README_de.md) | 한국어 (이 페이지)
+**Languages:** [English](README.md) | [日本語](README_ja.md) | 한국어 (이 페이지) | [Deutsch](README_de.md)
 
 이 저장소는 논문
 **“Personal Colour between Perceptual Space and Social Practice”** (게재 확정; 교정 중)
